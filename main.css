@@ -1,0 +1,85 @@
+/* main.css */
+
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/2/282986/jrsnbaoke4edapdfwqcb.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  
+ .mainpage {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #A1662F;
+    border: 1px solid #ddd;
+     /* Existing styles... */
+        background: linear-gradient(to bottom, transparent, #A1662F), url("https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/2/282986/jrsnbaoke4edapdfwqcb.jpg");
+    
+    
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+  
+  /* Sign Up Form Styles */
+  
+ .sign-up {
+    padding: 20px;
+  }
+  
+ .sign-up h2 {
+    margin-top: 0;
+  }
+  
+ .input-group {
+    margin-bottom: 20px;
+  }
+  
+ .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+ .input-group label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+ .btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ .btn:hover {
+    background-color: #3e8e41;
+  }
+  
+ .Register-link {
+    margin-top: 20px;
+  }
+  
+ .Register-link a {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
+ .Register-link a:hover {
+    color: #3e8e41;
+  }
