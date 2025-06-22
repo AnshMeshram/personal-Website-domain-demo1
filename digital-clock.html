@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi Time Zone Digital Clock</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #222; color: #fff; text-align: center; }
+    h1 { margin-top: 40px; }
+    .clocks { display: flex; justify-content: center; gap: 2rem; margin-top: 40px; flex-wrap: wrap; }
+    .clock-box { background: #333; padding: 1.5rem 2rem; border-radius: 10px; box-shadow: 0 4px 12px #0003; }
+    .zone { font-size: 1.2rem; margin-bottom: 0.5rem; color: #ffd700; }
+    .time { font-size: 2.2rem; letter-spacing: 2px; }
+  </style>
+</head>
+<body>
+  <h1>Multi Time Zone Digital Clock</h1>
+  <div class="clocks" id="clocks"></div>
+  <script>
+    // Define the time zones you want to display
+    const timeZones = [
+      { label: "UTC", zone: "UTC" },
+      { label: "New York (EST)", zone: "America/New_York" },
+      { label: "London", zone: "Europe/London" },
+      { label: "Paris", zone: "Europe/Paris" },
+      { label: "New Delhi", zone: "Asia/Kolkata" },
+      { label: "Tokyo", zone: "Asia/Tokyo" },
+      { label: "Sydney", zone: "Australia/Sydney" }
+    ];
+
+    const clocksDiv = document.getElementById('clocks');
+
+    function renderClocks() {
+      clocksDiv.innerHTML = '';
+      timeZones.forEach(tz => {
+        const now = new Date();
+        const options = {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false,
+          timeZone: tz.zone
+        };
+        const timeString = now.toLocaleTimeString([], options);
+        const html = `
+          <div class="clock-box">
+            <div class="zone">${tz.label}</div>
+            <div class="time">${timeString}</div>
+          </div>
+        `;
+        clocksDiv.innerHTML += html;
+      });
+    }
+
+    // Update every second
+    setInterval(renderClocks, 1000);
+    renderClocks();
+  </script>
+</body>
+</html>
